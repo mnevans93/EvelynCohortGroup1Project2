@@ -7,9 +7,6 @@ const app = express();
 
 
 
-app.get('/', function (req, res) {
-    res.send(`<h1>Hello Search</h1>`)
-})
 
 
 app.use('/search', (req, res, next) => {
@@ -24,6 +21,17 @@ app.use('/search', (req, res, next) => {
     });
     res.send(filteredSearch);
 });
+
+app.get('/', function (req, res) {
+  res.send(`<h1>Hello Search</h1>
+  <form id="form" role="search">
+  <input type="search" id="query" name="q"
+   placeholder="Search..."
+   aria-label="Search through site content">
+  <button>Search</button>
+</form>`)
+})
+
 
 
 
