@@ -11,6 +11,12 @@ class Default extends React.Component {
           <title>{title}</title>
         </head>
         <body>
+        <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+        </div>
           <nav>
             <a href={`${baseRoute}`}> Home</a>
             <a href={`${baseRoute}/new`}>Create a New Job Post</a>
