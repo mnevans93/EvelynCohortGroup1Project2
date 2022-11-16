@@ -7,7 +7,7 @@ const entitySchema = new mongoose.Schema({
 })
 
 // Make a Model for the Schema
-const Entity = mongoose.model('entity', entitySchema)
+const Entity = mongoose.model('Entity', entitySchema)
 
 // Export
 module.exports = Entity
