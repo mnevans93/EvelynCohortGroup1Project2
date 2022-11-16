@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 
 const accommodationSchema = new mongoose.Schema({
-    auditory: { type: String, required: true },
-    behavioral: { type: String, required: true },
-    cognitive: { type: String, required: true },
-    speech: { type: String, required: true },
-    time: { type: String, required: true },
-    vision: { type: String, required: true },
-    flexible: { type: String, required: true },
-    physical: { type: String, required: true }
+    auditory: { type: Array, required: true },
+    behavioral: { type: Array, required: true },
+    cognitive: { type: Array, required: true },
+    speech: { type: Array, required: true },
+    time: { type: Array, required: true },
+    vision: { type: Array, required: true },
+    flexible: { type: Array, required: true },
+    physical: { type: Array, required: true }
 });
 
 const Accommodation = mongoose.model('Accommodation', accommodationSchema)
