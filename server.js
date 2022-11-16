@@ -7,10 +7,12 @@ const app = express();
 
 
 
+app.get('/', function (req, res) {
+    res.send(`<h1>Hello Search</h1>`)
+})
 
 
-
-app.use('/', (req, res, next) => {
+app.use('/search', (req, res, next) => {
     const filters = req.query;
     const filteredSearch = search.filter(user => {
       let isValid = true;
@@ -26,6 +28,8 @@ app.use('/', (req, res, next) => {
 
 
 
+
+
 app.listen(PORT, () => {
-    console.log('Listening on port 3000')
+    console.log('Listening on port', PORT)
 })
