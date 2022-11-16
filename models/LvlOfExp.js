@@ -10,6 +10,6 @@ const lvlOfExpSchema = new Schema({
   }
 })
 
-const lvlOfExp = model("LvlOfExp", lvlOfExpSchema)
+const LvlOfExp = model("LvlOfExp", lvlOfExpSchema)
 
-module.exports = lvlOfExp
+module.exports = LvlOfExp

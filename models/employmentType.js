@@ -8,6 +8,6 @@ const employTypeSchema = new Schema ({
   }
 })
 
-const EmployType = model('employmentType', employTypeSchema)
+const Employment_Type = model('employmentType', employTypeSchema)
 
-module.exports = EmployType
+module.exports = Employment_Type

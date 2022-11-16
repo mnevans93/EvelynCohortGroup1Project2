@@ -37,6 +37,6 @@ const jobPostingSchema = new Schema(
   }
 )
 
-const jobPosting = model("job postings", jobPostingSchema)
+const Job_Posting = model("Job_postings", jobPostingSchema)
 
-module.exports = jobPosting
+module.exports = Job_Posting

@@ -25,7 +25,7 @@ const employerSchema = new Schema(
   }
 )
 
-const Employer = model("employer", employerSchema)
+const Employer = model("Employer", employerSchema)
 
 module.exports = Employer
 

@@ -10,6 +10,6 @@ const salarySchema = new Schema ({
   }]
 })
 
-const Salary = model('salary', salarySchema)
+const Salary = model('Salary', salarySchema)
 
 module.exports = Salary

@@ -10,6 +10,6 @@ const locationSchema = new Schema ({
   }]
 })
 
-const Location = model('location', locationSchema)
+const Location = model('Location', locationSchema)
 
 module.exports = Location
