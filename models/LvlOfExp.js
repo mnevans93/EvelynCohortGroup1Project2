@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const lvlOfExpSchema = new Schema(
   {
-    type: String,
-    enum: ["Internship", "Entry Level", "Mid-Level", "Executive Level", "Senior Leadership"],
+    type: Array,
+    enum: ['Internship'] ['Entry Level'] ['Mid-Level'] ['Executive Level'] ['Senior Leadership'],
     required: true,
   }
 )

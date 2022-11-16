@@ -5,8 +5,8 @@ const salarySchema = new Schema ({
   Minimum: { type: Number, required: true },
   Maximum: { type: Number, required: true },
   Rate: [{
-    type: String,
-    enum: ['Annually', 'Hourly']
+    type: Array,
+    enum: ['Annually'] ['Hourly']
   }]
 })
 
