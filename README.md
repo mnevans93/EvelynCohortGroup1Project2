@@ -15,7 +15,7 @@ models
 |- Employment Type
 |- Level of Experience
 |- Benefits
-|- Entity
+|- Workplace Tags
 |- Accomondations
 |- Search
 ```
@@ -32,8 +32,11 @@ controller
 ```
 <h2>CRUD Functionality</h2>
 <h3>Creating</h3>
+
 <h3>Reading</h3>
+
 <h3>Updating</h3>
+
 <h3>Deleting/Destroying</h3>
 
 
