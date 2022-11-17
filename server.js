@@ -1,9 +1,17 @@
 const express = require('express')
-const { Mongoose } = require('mongoose')
+
 
 const PORT = process.env.PORT || 3000
 
 const app = express()
+
+
+// const searchModel = {
+//   JobPosting: require('../models/jobPosting'),
+//   User: require('../models/user'),
+//   Accomodation: require('../models/accomodation')
+// }
+
 
 
 
@@ -20,8 +28,8 @@ app.get('/', function (req, res) {
 
 app.get('/search', (req, res) => {
   // assume there is a filter and a value on req.query or theres an error
-  if(req.query.filter && req.query.value){
-     search.where(req.query.filter).equals(req.query.value).exec((err, results) => {
+  if(req.query.filter && req.query.value && req.query.model){
+     searchModel[req.query.model].where(req.query.filter).equals(req.query.value).exec((err, results) => {
        if(err){
            res.status(400).json({ msg: err})
         } else {
