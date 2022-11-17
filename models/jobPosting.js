@@ -17,9 +17,10 @@ const jobPostingSchema = new Schema(
       type: Schema.Types.ObjectID,
       ref: 'EmploymentType'
     }],
+    //entity.js
     WorkplaceTags: [{
       type: Schema.Types.ObjectID,
-      ref: "workplace tags"
+      ref: "Entity"
     }],
     // Level of Experience
     LvlOfExp: [{
@@ -37,6 +38,6 @@ const jobPostingSchema = new Schema(
   }
 )
 
-const JobPosting = model("Job_postings", jobPostingSchema)
+const JobPosting = mongoose.model("Job_postings", jobPostingSchema)
 
 module.exports = JobPosting

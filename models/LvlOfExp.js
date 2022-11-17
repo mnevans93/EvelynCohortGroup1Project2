@@ -10,6 +10,6 @@ const lvlOfExpSchema = new Schema({
   }
 })
 
-const LvlOfExp = model("LvlOfExp", lvlOfExpSchema)
+const LvlOfExp = mongoose.model("LvlOfExp", lvlOfExpSchema)
 
 module.exports = LvlOfExp

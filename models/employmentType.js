@@ -8,6 +8,6 @@ const employmentTypeSchema = new Schema ({
   }
 })
 
-const EmploymentType = model('EmploymentType', employmentTypeSchema)
+const EmploymentType = mongoose.model('EmploymentType', employmentTypeSchema)
 
 module.exports = EmploymentType

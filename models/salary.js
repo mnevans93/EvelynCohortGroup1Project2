@@ -10,6 +10,6 @@ const salarySchema = new Schema ({
   }]
 })
 
-const Salary = model('Salary', salarySchema)
+const Salary = mongoose.model('Salary', salarySchema)
 
 module.exports = Salary

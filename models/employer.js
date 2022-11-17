@@ -25,7 +25,7 @@ const employerSchema = new Schema(
   }
 )
 
-const Employer = model("Employer", employerSchema)
+const Employer = mongoose.model("Employer", employerSchema)
 
 module.exports = Employer
 
