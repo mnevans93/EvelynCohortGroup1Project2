@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const employTypeSchema = new Schema ({
+const employmentTypeSchema = new Schema ({
   employmentType: {
   type: Array,
   enum: ['Full-Time', 'Part-Time', 'Contract', 'Temporary']
   }
 })
 
-const Employment_Type = model('employmentType', employTypeSchema)
+const EmploymentType = model('EmploymentType', employmentTypeSchema)
 
-module.exports = Employment_Type
+module.exports = EmploymentType

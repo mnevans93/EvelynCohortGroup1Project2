@@ -18,9 +18,9 @@ const employerSchema = new Schema(
     },
     companyName: { type: String, required: true },
     companyEmail: { type: String, required: true },
-    jobPosting: [{
+    jobPostings: [{
       type: Schema.Types.ObjectID,
-      ref: "job postings"
+      ref: "Job_postings"
     }]
   }
 )

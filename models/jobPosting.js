@@ -7,15 +7,15 @@ const jobPostingSchema = new Schema(
     JobDesciption: { type: String, required: true },
     Location: [{
       type: Schema.Types.ObjectID,
-      ref: "location"
+      ref: "Location"
     }],
     Salary: [{
       type: Schema.Types.ObjectID,
-      ref: "salary"
+      ref: 'Salary'
     }],
     EmploymentType: [{
       type: Schema.Types.ObjectID,
-      ref: "employment type"
+      ref: 'EmploymentType'
     }],
     WorkplaceTags: [{
       type: Schema.Types.ObjectID,
@@ -24,19 +24,19 @@ const jobPostingSchema = new Schema(
     // Level of Experience
     LvlOfExp: [{
       type: Schema.Types.ObjectID,
-      ref: "lvl of exp"
+      ref: "LvlOfExp"
     }],
     Benefits: [{
       type: Schema.Types.ObjectID,
-      ref: "benefits"
+      ref: "Benefits"
     }],
-    Accommodations: [{
+    Accommodation: [{
       type: Schema.Types.ObjectID,
-      ref: "accommodations"
+      ref: "Accommodation"
     }],
   }
 )
 
-const Job_Posting = model("Job_postings", jobPostingSchema)
+const JobPosting = model("Job_postings", jobPostingSchema)
 
-module.exports = Job_Posting
+module.exports = JobPosting
