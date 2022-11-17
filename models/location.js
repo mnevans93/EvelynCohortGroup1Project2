@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const model = mongoose.model
 
 const locationSchema = new Schema ({
   City: { type: String, required: true },
