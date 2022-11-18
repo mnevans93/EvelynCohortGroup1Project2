@@ -1,14 +1,11 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const model = mongoose.model
 
 const lvlOfExpSchema = new Schema({
   LevelOfExperience: 
   {
-    type: Array, items: {
-      type: String,
-      enum: ['Internship', 'Entry Level', 'Mid-Level', 'Executive Level', 'Senior Leadership'],
-    },
+    type: Array,
+    enum: ['Internship', 'Entry Level', 'Mid-Level', 'Executive Level', 'Senior Leadership'],
     required: true,
   }
 })

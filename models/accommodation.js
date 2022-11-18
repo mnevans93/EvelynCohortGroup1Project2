@@ -1,8 +1,6 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-const model = mongoose.model
 
-const accommodationSchema = new Schema({
+const accommodationSchema = new mongoose.Schema({
     auditory: { type: Array, required: true },
     behavioral: { type: Array, required: true },
     cognitive: { type: Array, required: true },
@@ -13,6 +11,6 @@ const accommodationSchema = new Schema({
     physical: { type: Array, required: true }
 });
 
-const Accommodation = model('Accommodation', accommodationSchema)
+const Accommodation = mongoose.model('Accommodation', accommodationSchema)
 
 module.exports = Accommodation
