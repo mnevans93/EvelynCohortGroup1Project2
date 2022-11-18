@@ -4,7 +4,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 const database = require('./models/database')
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 30000000000000000000000000000000
 
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {
