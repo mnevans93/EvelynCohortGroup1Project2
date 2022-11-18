@@ -7,7 +7,8 @@ const locationSchema = new Schema({
   State: { type: String, required: true },
   TypeOfWork: [{
     type: Array,
-    enum: ['Remote', 'On-site', 'Hybrid']
+    enum: ['Remote', 'On-site', 'Hybrid'],
+    required: true
   }]
 })
 
