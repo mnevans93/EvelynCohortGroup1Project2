@@ -5,7 +5,7 @@ const model = mongoose.model
 const jobPostingSchema = new Schema(
   {
     PositionTitle: { type: String, required: true },
-    JobDesciption: { type: String, required: true },
+    JobDescription: { type: String, required: true },
     Location: [{
       type: Schema.Types.ObjectID,
       ref: 'Location'
@@ -20,7 +20,7 @@ const jobPostingSchema = new Schema(
     }],
     WorkplaceTags: [{
       type: Schema.Types.ObjectID,
-      ref: 'workplace tags'
+      ref: 'WorkplaceTags'
     }],
     // Level of Experience
     LvlOfExp: [{
