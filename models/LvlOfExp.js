@@ -3,16 +3,17 @@ const Schema = mongoose.Schema
 const model = mongoose.model
 
 const lvlOfExpSchema = new Schema({
-  LevelOfExperience: 
+  LevelOfExperience:
   {
-    type: Array, items: {
+    type: Array,
+    items: {
       type: String,
-      enum: ['Internship', 'Entry Level', 'Mid-Level', 'Executive Level', 'Senior Leadership'],
+      enum: ['Internship', 'Entry Level', 'Mid-Level', 'Executive Level', 'Senior Leadership']
     },
-    required: true,
+    required: true
   }
 })
 
-const LvlOfExp = model("LvlOfExp", lvlOfExpSchema)
+const LvlOfExp = model('LvlOfExp', lvlOfExpSchema)
 
 module.exports = LvlOfExp
