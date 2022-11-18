@@ -21,15 +21,15 @@ const generateRoutes = (router, models, apiController) => {
         const databaseController = new DatabaseController(model.path)
         console.log(databaseController)
         //Index
-        router.get(`/api/${model.name}`, databaseController.index, apiController.indexEntity)
+        router.get(`/api/${model.name}`, databaseController.index.bind(databaseController), apiController.indexEntity)
         //Delete
-        router.delete(`/api/${model.name}/:id`, databaseController.delete, apiController.showEntity)
+        router.delete(`/api/${model.name}/:id`, databaseController.delete.bind(databaseController), apiController.showEntity)
         //Update
-        router.put(`/api/${model.name}/:id`, databaseController.update, apiController.showEntity)
+        router.put(`/api/${model.name}/:id`, databaseController.update.bind(databaseController), apiController.showEntity)
         //Create
-        router.post(`/api/${model.name}`, databaseController.create, apiController.showEntity)
+        router.post(`/api/${model.name}`, databaseController.create.bind(databaseController), apiController.showEntity)
         //Show
-        router.get(`/api/${model.name}/:id`, databaseController.show, apiController.showEntity)
+        router.get(`/api/${model.name}/:id`, databaseController.show.bind(databaseController), apiController.showEntity)
     })
 }
 

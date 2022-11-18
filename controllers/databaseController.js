@@ -3,7 +3,7 @@ class DatabaseController {
         this.model = model
     }
 
-    errorCheck(err) {
+    errorCheck = (err) => {
         if (err) {
             res.status(400).send({msg: err.message})
             return true
