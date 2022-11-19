@@ -6,6 +6,7 @@ const database = require('./models/database')
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.use((req, res, next) => {
     res.locals.data = {}
     next()
