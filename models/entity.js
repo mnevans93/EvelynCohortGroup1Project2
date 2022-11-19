@@ -1,13 +1,12 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const model = mongoose.model
 
-// Make a Schema
-const entitySchema = new mongoose.Schema({
-  BIPOCLedOrg: Boolean,
-  LGBTQIAFriendly: Boolean
+const entitySchema = new Schema({
+  BIPOCLedOrg: {type: Boolean, required: true},
+  LGBTQIAFriendly: {type: Boolean, required: true}
 })
 
-// Make a Model for the Schema
-const Entity = mongoose.model('Entity', entitySchema)
+const Entity = model('Entity', entitySchema)
 
-// Export
 module.exports = Entity
