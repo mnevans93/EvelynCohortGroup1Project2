@@ -18,7 +18,7 @@ For this project, we will be using POSTMAN to create the API. On POSTMAN, we can
 
 <h2>ERD and models</h2>
 
-![ERD-diagram](README_folder/GP2-IS_Models_ERD.png)
+![ERD-diagram](README_folder/GP2-IS_Model_ERD.png)
 
 
 ```
