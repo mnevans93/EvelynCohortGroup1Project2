@@ -25,5 +25,5 @@ app.use(express.static('public'))
 app.use('/invisiblestrengths', require('./controllers/routeController'))
 
 app.listen(PORT, () => {
-  console.log(`Listening on Port ${PORT}`)
+  console.log('Listening on Port', PORT)
 })
