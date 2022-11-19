@@ -32,6 +32,7 @@ models
 |- Benefits
 |- Entity
 |- Accomondations
+|- Database
 ```
 
 <h2>Controllers</h2>
