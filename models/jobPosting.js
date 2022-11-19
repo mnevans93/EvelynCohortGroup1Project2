@@ -6,35 +6,35 @@ const jobPostingSchema = new Schema(
   {
     PositionTitle: { type: String, required: true },
     JobDescription: { type: String, required: true },
-    Location: [{
+    Location: {
       type: Schema.Types.ObjectID,
       ref: 'Location'
-    }],
-    Salary: [{
+    },
+    Salary: {
       type: Schema.Types.ObjectID,
       ref: 'Salary'
-    }],
-    EmploymentType: [{
+    },
+    EmploymentType: {
       type: Schema.Types.ObjectID,
       ref: 'EmploymentType'
-    }],
-    WorkplaceTags: [{
+    },
+    Entity: {
       type: Schema.Types.ObjectID,
-      ref: 'WorkplaceTags'
-    }],
+      ref: 'Entity'
+    },
     // Level of Experience
-    LvlOfExp: [{
+    LvlOfExp: {
       type: Schema.Types.ObjectID,
       ref: 'LvlOfExp'
-    }],
-    Benefits: [{
+    },
+    Benefit: {
       type: Schema.Types.ObjectID,
-      ref: 'Benefits'
-    }],
-    Accommodation: [{
+      ref: 'Benefit'
+    },
+    Accommodation: {
       type: Schema.Types.ObjectID,
       ref: 'Accommodation'
-    }]
+    }
   }
 )
 
