@@ -12,7 +12,7 @@ const models = [
   { name: 'entity', path: require('../models/entity') },
   { name: 'jobposting', path: require('../models/jobPosting') },
   { name: 'location', path: require('../models/location') },
-  { name: 'lvlofexp', path: require('../models/lvlOfExp') },
+  { name: 'lvlOfExp', path: require('../models/lvlOfExp') },
   { name: 'salary', path: require('../models/salary') }
 ]
 
