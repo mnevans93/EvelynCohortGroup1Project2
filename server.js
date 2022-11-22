@@ -23,6 +23,7 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 app.use('/invisiblestrengths', require('./controllers/routeController'))
+app.use('/invisiblestrengths/search', require('./controllers/searchController'))
 
 app.listen(PORT, () => {
   console.log('Listening on Port', PORT)

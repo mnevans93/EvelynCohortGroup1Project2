@@ -4,34 +4,34 @@ const model = mongoose.model
 
 const jobPostingSchema = new Schema(
   {
-    PositionTitle: { type: String, required: true },
-    JobDescription: { type: String, required: true },
-    Location: {
+    positionTitle: { type: String, required: true },
+    jobDescription: { type: String, required: true },
+    location: {
       type: Schema.Types.ObjectID,
       ref: 'Location'
     },
-    Salary: {
+    salary: {
       type: Schema.Types.ObjectID,
       ref: 'Salary'
     },
-    EmploymentType: {
+    employmentType: {
       type: Schema.Types.ObjectID,
       ref: 'EmploymentType'
     },
-    Entity: {
+    entity: {
       type: Schema.Types.ObjectID,
       ref: 'Entity'
     },
     // Level of Experience
-    LvlOfExp: {
+    lvlOfExp: {
       type: Schema.Types.ObjectID,
       ref: 'LvlOfExp'
     },
-    Benefit: {
+    benefit: {
       type: Schema.Types.ObjectID,
       ref: 'Benefit'
     },
-    Accommodation: {
+    accommodation: {
       type: Schema.Types.ObjectID,
       ref: 'Accommodation'
     }

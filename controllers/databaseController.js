@@ -1,7 +1,7 @@
 class DatabaseController {
-  constructor (model, params = "") {
+  constructor (model, params = '') {
     this.model = model
-    this.params = params 
+    this.params = params
   }
 
   errorCheck = (err, res) => {
@@ -12,7 +12,7 @@ class DatabaseController {
   }
 
   index (req, res, next) {
-    this.model.find({}).populate(this.params).exec((err, foundDocuments)=>{
+    this.model.find({}).populate(this.params).exec((err, foundDocuments) => {
       if (this.errorCheck(err, res) === false) {
         res.locals.data.documents = foundDocuments
         next()
@@ -48,7 +48,7 @@ class DatabaseController {
   }
 
   show (req, res, next) {
-    this.model.findById(req.params.id).populate(this.params).exec((err, foundDocument)=>{
+    this.model.findById(req.params.id).populate(this.params).exec((err, foundDocument) => {
       if (this.errorCheck(err, res) === false) {
         res.locals.data.document = foundDocument
         next()

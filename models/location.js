@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 const model = mongoose.model
 
 const locationSchema = new Schema({
-  City: { type: String, required: true },
-  State: { type: String, required: true },
-  TypeOfWork: [{
+  city: { type: String, required: true },
+  state: { type: String, required: true },
+  typeOfWork: [{
     type: Array,
     enum: ['Remote', 'On-site', 'Hybrid'],
     required: true
