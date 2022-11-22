@@ -3,9 +3,9 @@ const router = express.Router()
 
 const models = require('../models/modelsArray')
 
-const searchRoute = (models, router) => {
-  models.forEach(i => {
-    router.get(`/${i.name}/:id`, (req, res) => {
+const generateSearchRoutes = (models, router) => {
+  models.forEach(model => {
+    router.get(`/${model.name}/:id`, (req, res) => {
       // assume there is a filter and a value on req.query or theres an error
       if (req.query.filter && req.query.value && req.query.model) {
         models[req.query.model].where(req.query.filter).equals(req.query.value).exec((err, results) => {
@@ -25,6 +25,6 @@ const searchRoute = (models, router) => {
   return router
 }
 
-searchRoute(models, router)
+generateSearchRoutes(models, router)
 
 module.exports = router
