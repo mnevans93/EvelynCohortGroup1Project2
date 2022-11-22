@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const model = mongoose.model
 
 const lvlOfExpSchema = new Schema({
-  LevelOfExperience:
+  levelOfExperience:
   {
     type: Array,
     items: {

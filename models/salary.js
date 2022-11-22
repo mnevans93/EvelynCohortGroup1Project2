@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 const model = mongoose.model
 
 const salarySchema = new Schema({
-  Minimum: { type: Number, required: true },
-  Maximum: { type: Number, required: true },
-  Rate: [{
+  minimum: { type: Number, required: true },
+  maximum: { type: Number, required: true },
+  rate: [{
     type: Array,
     enum: ['Annually', 'Hourly'],
     required: true
