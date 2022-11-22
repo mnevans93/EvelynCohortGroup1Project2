@@ -17,6 +17,7 @@
     "jsx-view-engine": "^0.1.0",
     "method-override": "^3.0.0",
     "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

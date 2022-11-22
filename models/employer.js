@@ -3,31 +3,28 @@ const Schema = mongoose.Schema
 
 const employerSchema = new Schema(
   {
-    username: { 
-      type: String, 
-      required: true, 
+    username: {
+      type: String,
+      required: true,
       unique: true,
       minLength: 5,
-      maxLength: 15,
+      maxLength: 15
     },
-    password: { 
-      type: String, 
+    password: {
+      type: String,
       required: true,
       minLength: 8,
-      maxLength: 20,
+      maxLength: 20
     },
     companyName: { type: String, required: true },
     companyEmail: { type: String, required: true },
     jobPostings: [{
       type: Schema.Types.ObjectID,
-      ref: "Job_postings"
+      ref: 'JobPostings'
     }]
   }
 )
 
-const Employer = model("Employer", employerSchema)
+const Employer = model('Employer', employerSchema)
 
 module.exports = Employer
-
-
-

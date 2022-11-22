@@ -3,40 +3,40 @@ const Schema = mongoose.Schema
 
 const jobPostingSchema = new Schema(
   {
-    PositionTitle: { type: String, required: true },
-    JobDesciption: { type: String, required: true },
-    Location: [{
+    positionTitle: { type: String, required: true },
+    jobDescription: { type: String, required: true },
+    location: {
       type: Schema.Types.ObjectID,
-      ref: "Location"
-    }],
-    Salary: [{
+      ref: 'Location'
+    },
+    salary: {
       type: Schema.Types.ObjectID,
       ref: 'Salary'
-    }],
-    EmploymentType: [{
+    },
+    employmentType: {
       type: Schema.Types.ObjectID,
       ref: 'EmploymentType'
-    }],
-    WorkplaceTags: [{
+    },
+    entity: {
       type: Schema.Types.ObjectID,
-      ref: "workplace tags"
-    }],
+      ref: 'Entity'
+    },
     // Level of Experience
-    LvlOfExp: [{
+    lvlOfExp: {
       type: Schema.Types.ObjectID,
-      ref: "LvlOfExp"
-    }],
-    Benefits: [{
+      ref: 'LvlOfExp'
+    },
+    benefit: {
       type: Schema.Types.ObjectID,
-      ref: "Benefits"
-    }],
-    Accommodation: [{
+      ref: 'Benefit'
+    },
+    accommodation: {
       type: Schema.Types.ObjectID,
-      ref: "Accommodation"
-    }],
+      ref: 'Accommodation'
+    }
   }
 )
 
-const JobPosting = model("Job_postings", jobPostingSchema)
+const JobPosting = model('JobPosting', jobPostingSchema)
 
 module.exports = JobPosting
